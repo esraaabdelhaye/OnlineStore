@@ -28,7 +28,7 @@ body{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 15px 60px;
+    padding: 15px 40px 15px 80px;
     background-color: #222122;
     /* background-color: transparent; */
     color: #fff;
@@ -39,6 +39,7 @@ body{
 
 .cart{
     position: relative;
+    margin-top: 15px;
 }
 
 .nav-bar a , .nav-bar.cart a:visited{
@@ -100,9 +101,9 @@ body{
 .side-bar{
     position: fixed;
     top: 0;
-    left: 0;
+    left: -170px;
     height: 100vh;
-    width: 35%;
+    width: 35vw;
     max-width: 170px;
     background-color: #222122;
     z-index: 1;
@@ -115,11 +116,15 @@ body{
     align-items: center;
     justify-content: center;
     font-style: italic;
+    transition: .4s;
     margin: 0;
     text-align: center;
     font-family: 'Cormorant Upright', serif;
 }
 
+.opened{
+    left: 0;
+}
 .side-bar p{
     color: #f09433;
     font-weight: bold;
@@ -161,7 +166,7 @@ body{
     display: grid;
     gap: 30px;
     grid-template-columns: repeat(3,230px);
-    justify-content: right;
+    justify-content: center;
     margin-top: 80px;
 }
 
@@ -501,6 +506,12 @@ body{
     animation-duration: 1s;
 }
 
+.fa-bars{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+}
 
 
 @keyframes showAnimation {
@@ -531,9 +542,9 @@ body{
     }
 }
 
-@media screen and (max-width:950px) {
+@media screen and (max-width:900px) {
     .store{
-        grid-template-columns: repeat(2,250px);
+        grid-template-columns: repeat(2,300px);
     }
     .cart-item{
         width: 90%;
@@ -548,17 +559,20 @@ body{
         width: 80%;
     }
 }
-
-@media screen and (max-width:600px) {
+@media screen and (max-width:670px) {
     .store{
-        grid-template-columns: repeat(1,250px);
+        grid-template-columns: repeat(2,250px);
     }
-    
+}
+@media screen and (max-width:570px) {
+    .store{
+        grid-template-columns: repeat(2,200px);
+    }
 }
 
 @media screen and (max-width:450px) {
     .store{
-        grid-template-columns: repeat(1,200px);
+        grid-template-columns: repeat(1,300px);
     }
 }
 
