@@ -7,6 +7,7 @@ const applyFilter= document.querySelector('.apply-filter')
 let basketItemsInfo = JSON.parse(localStorage.getItem('storageItemInfo')) || []
 const alertMessage = document.querySelector('.alert')
 const ItemsNumberPlaceHolder = document.querySelector('.items-number')
+const sideBar = document.querySelector('.side-bar')
 
 /*
 !displaying items data
@@ -142,7 +143,13 @@ function incrementItem(id){
   }, 1000)
 }
 
+/**
+ ! Open Close Menu
+*/
 
+function toggleMenu(){
+  sideBar.classList.toggle("opened")
+}
 
 
 /**
